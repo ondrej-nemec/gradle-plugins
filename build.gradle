@@ -1,6 +1,7 @@
 plugins {
     id 'java-gradle-plugin'
     id 'maven-publish'
+    id 'com.gradle.plugin-publish' version '0.10.1'
 }
 
 
@@ -16,7 +17,6 @@ pluginBundle {
     description = "Description"
     website = "https://github.com/ondrej-nemec/gradle-plugins"
     vcsUrl = "https://github.com/ondrej-nemec/gradle-plugins"
-    tags = listOf("build")
 }
 
 gradlePlugin {
