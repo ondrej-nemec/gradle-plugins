@@ -12,6 +12,12 @@ repositories {
     mavenCentral()
 }
 
+pluginBundle {
+    description = "Description"
+    website = "https://github.com/ondrej-nemec/gradle-plugins"
+    vcsUrl = "https://github.com/ondrej-nemec/gradle-plugins"
+}
+
 gradlePlugin {
     plugins {
         create("RunGeneratePlugin") {
