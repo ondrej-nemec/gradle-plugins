@@ -1,11 +1,26 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
 
-// Apply the java-library plugin to add support for Java Library
-apply plugin: 'java-library'
+
+group = "com.github.ondrej-nemec"
+version = "0.0.1"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
     mavenCentral()
 }
+
+gradlePlugin {
+    plugins {
+        create("RunGeneratePlugin") {
+            id = "com.github.ondrej-nemec.run-generate"
+            implementationClass = "generator.RunFileGenerator"
+        }
+    }
+}
+
 
 dependencies {
       compile gradleApi()
